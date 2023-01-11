@@ -1,11 +1,11 @@
 # HExchanger
-simulation of a labscale shell and tube heat exchanger water/water.
+simulation of a labscale 1-1 shell and tube heat exchanger water/water.
 
 - $U_{inlet shell}$ = 0.2 m/s;
 - $U_{inlet tubes}$ = 0.02 m/s;
 - $T_{inlet shell cold}$ = 283K;
 - $T_{inlet tubes hot}$ = 383K;
-- $configuration = counter current$
+- $configuration = co-current$
 
 ## Results:
 - $U_{outlet shell}$ = 0.2 m/s;
