@@ -1,0 +1,110 @@
+FoamFile
+{
+	version	2.0;
+	format	ascii;
+	class	dictionary;
+	location	"system";
+	object	createPatchDict;
+}
+pointSync	false;
+patches	(
+	{
+		name	baffles;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(baffles_face_0 baffles_face_1);
+	}
+
+	{
+		name	baffles_slave;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(baffles_face_0_slave baffles_face_1_slave);
+	}
+
+	{
+		name	exchanger;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(exchanger_face_0 exchanger_face_1 exchanger_face_2 exchanger_face_3 exchanger_face_4 exchanger_face_5 exchanger_face_7 exchanger_face_8 exchanger_face_9);
+	}
+
+	{
+		name	exchanger_hot_in;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(exchanger_face_10);
+	}
+
+	{
+		name	exchanger_hot_out;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(exchanger_face_6);
+	}
+
+	{
+		name	exchanger_cold_in;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(exchanger_face_11);
+	}
+
+	{
+		name	exchanger_cold_out;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(exchanger_face_12);
+	}
+
+	{
+		name	pipes;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(pipes_face_1 pipes_face_2 pipes_face_3 pipes_face_5 pipes_face_6 pipes_face_7 pipes_face_8 pipes_face_9 pipes_face_10 pipes_face_11 pipes_face_12 pipes_face_13);
+	}
+
+	{
+		name	pipes_baffle_in;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(pipes_face_4);
+	}
+
+	{
+		name	pipes_baffle_out;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(pipes_face_0);
+	}
+);

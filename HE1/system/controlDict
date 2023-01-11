@@ -1,0 +1,31 @@
+FoamFile
+{
+	class	dictionary;
+	format	ascii;
+	location	system;
+	object	controlDict;
+	version	2.0;
+}
+application	chtMultiRegionSimpleFoam;
+deltaT	1;
+endTime	4200;
+purgeWrite	2;
+startFrom	latestTime;
+startTime	0;
+stopAt	endTime;
+timeFormat	general;
+timePrecision	6;
+writeControl	timeStep;
+writeInterval	200;
+writePrecision	7;
+runTimeModifiable	true;
+compression	uncompressed;
+writeFormat	binary;
+OptimisationSwitches
+{
+	fileHandler	uncollated;
+	fileModificationSkew	0;
+	maxMasterFileBufferSize	1.0E9;
+	maxThreadFileBufferSize	1.0E9;
+	mpiBufferSize	200000000;
+}

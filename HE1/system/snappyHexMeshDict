@@ -1,0 +1,408 @@
+FoamFile
+{
+	version	2.0;
+	class	dictionary;
+	format	ascii;
+	location	"system";
+	object	snappyHexMeshDict;
+}
+castellatedMesh	true;
+snap	true;
+addLayers	true;
+geometry
+{
+	baffles.stl
+	{
+		type	triSurfaceMesh;
+		simflowType	stl;
+		name	baffles;
+		includedAngle	120.0;
+		faceGroups
+		{
+			face_0
+			{
+				name	baffles;
+			}
+			face_1
+			{
+				name	baffles;
+			}
+		}
+	}
+	exchanger.stl
+	{
+		type	triSurfaceMesh;
+		simflowType	stl;
+		name	exchanger;
+		includedAngle	120.0;
+		faceGroups
+		{
+			face_0
+			{
+				name	exchanger;
+			}
+			face_1
+			{
+				name	exchanger;
+			}
+			face_2
+			{
+				name	exchanger;
+			}
+			face_3
+			{
+				name	exchanger;
+			}
+			face_4
+			{
+				name	exchanger;
+			}
+			face_5
+			{
+				name	exchanger;
+			}
+			face_7
+			{
+				name	exchanger;
+			}
+			face_8
+			{
+				name	exchanger;
+			}
+			face_9
+			{
+				name	exchanger;
+			}
+			face_10
+			{
+				name	exchanger_hot_in;
+			}
+			face_6
+			{
+				name	exchanger_hot_out;
+			}
+			face_11
+			{
+				name	exchanger_cold_in;
+			}
+			face_12
+			{
+				name	exchanger_cold_out;
+			}
+		}
+	}
+	pipes.stl
+	{
+		type	triSurfaceMesh;
+		simflowType	stl;
+		name	pipes;
+		includedAngle	120.0;
+		faceGroups
+		{
+			face_1
+			{
+				name	pipes;
+			}
+			face_2
+			{
+				name	pipes;
+			}
+			face_3
+			{
+				name	pipes;
+			}
+			face_5
+			{
+				name	pipes;
+			}
+			face_6
+			{
+				name	pipes;
+			}
+			face_7
+			{
+				name	pipes;
+			}
+			face_8
+			{
+				name	pipes;
+			}
+			face_9
+			{
+				name	pipes;
+			}
+			face_10
+			{
+				name	pipes;
+			}
+			face_11
+			{
+				name	pipes;
+			}
+			face_12
+			{
+				name	pipes;
+			}
+			face_13
+			{
+				name	pipes;
+			}
+			face_4
+			{
+				name	pipes_baffle_in;
+			}
+			face_0
+			{
+				name	pipes_baffle_out;
+			}
+		}
+	}
+}
+castellatedMeshControls
+{
+	locationInMesh	(0.0 0.0 0.1);
+	refinementSurfaces
+	{
+		baffles
+		{
+			level	( 0 1 );
+			patchInfo
+			{
+				type	wall;
+			}
+			faceZone	baffles;
+			faceType	baffle;
+		}
+		exchanger
+		{
+			level	( 0 2 );
+			patchInfo
+			{
+				type	wall;
+			}
+		}
+		pipes
+		{
+			level	( 1 2 );
+			patchInfo
+			{
+				type	wall;
+			}
+		}
+	}
+	refinementRegions
+	{
+	}
+	limitRegions
+	{
+	}
+	features	
+	(
+	{
+		file	"baffles.eMesh";
+		levels	((0 0));
+	}
+	{
+		file	"exchanger.eMesh";
+		levels	((0 0));
+	}
+	{
+		file	"pipes.eMesh";
+		levels	((0 0));
+	}
+	);
+	maxLocalCells	1000000;
+	maxGlobalCells	10000000;
+	nCellsBetweenLevels	4;
+	maxLoadUnbalance	0.1;
+	minRefinementCells	10;
+	resolveFeatureAngle	30.0;
+	allowFreeStandingZoneFaces	true;
+}
+snapControls
+{
+	tolerance	1.0;
+	nSmoothPatch	3;
+	nSolveIter	500;
+	nRelaxIter	5;
+	nFeatureSnapIter	10;
+	implicitFeatureSnap	true;
+	explicitFeatureSnap	true;
+	multiRegionFeatureSnap	true;
+	nFaceSplitInterval	5;
+}
+addLayersControls
+{
+	layers
+	{
+		exchanger_face_0
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_1
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_2
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_3
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_4
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_5
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_7
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_8
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		exchanger_face_9
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_1
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_2
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_3
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_5
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_6
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_7
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_8
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_9
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_10
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_11
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_12
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+		pipes_face_13
+		{
+			nSurfaceLayers	5;
+			expansionRatio	1.25;
+			firstLayerThickness	0.2;
+		}
+	}
+	relativeSizes	true;
+	minThickness	0.1;
+	firstLayerThickness	0.2;
+	expansionRatio	1.25;
+	nGrow	0;
+	featureAngle	180.0;
+	maxFaceThicknessRatio	0.5;
+	nSmoothSurfaceNormals	5;
+	nSmoothThickness	10;
+	minMedialAxisAngle	90.0;
+	maxThicknessToMedialRatio	0.5;
+	nMedialAxisIter	100;
+	nSmoothNormals	3;
+	slipFeatureAngle	30.0;
+	nRelaxIter	5;
+	nBufferCellsNoExtrude	0;
+	nLayerIter	50;
+	nRelaxedIter	20;
+	detectExtrusionIsland	true;
+}
+meshQualityControls
+{
+	maxNonOrtho	65.0;
+	maxBoundarySkewness	20.0;
+	maxInternalSkewness	4.0;
+	maxConcave	80.0;
+	minVol	1.0E-14;
+	minTetQuality	1.0E-20;
+	minArea	-1.0;
+	minTwist	0.02;
+	minTriangleTwist	-1.0;
+	minDeterminant	0.01;
+	minFaceWeight	0.05;
+	minVolRatio	0.01;
+	minVolCollapseRatio	0.1;
+	nSmoothScale	4;
+	errorReduction	0.75;
+	relaxed
+	{
+		maxNonOrtho	75.0;
+	}
+}
+mergeTolerance	1.0E-6;
+debug	0;

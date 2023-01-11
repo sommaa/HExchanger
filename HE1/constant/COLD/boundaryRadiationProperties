@@ -1,0 +1,32 @@
+FoamFile
+{
+	version	2.0;
+	class	dictionary;
+	format	ascii;
+	location	"constant/COLD";
+	object	boundaryRadiationProperties;
+}
+baffles
+{
+}
+baffles_slave
+{
+}
+exchanger
+{
+}
+exchanger_cold_in
+{
+}
+exchanger_cold_out
+{
+}
+pipes
+{
+}
+pipes_baffle_in
+{
+}
+pipes_baffle_out
+{
+}

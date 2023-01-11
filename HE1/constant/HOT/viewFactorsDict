@@ -1,0 +1,43 @@
+FoamFile
+{
+	version	2.0;
+	class	dictionary;
+	format	ascii;
+	location	"constant/HOT";
+	object	viewFactorsDict;
+}
+writeViewFactorMatrix	true;
+writeFacesAgglomeration	true;
+writePatchViewFactors	false;
+maxDynListLength	1000000;
+facesPerCluster	5;
+exchanger
+{
+	nFacesInCoarsestLevel	3637;
+	featureAngle	20.0;
+}
+exchanger_hot_in
+{
+	nFacesInCoarsestLevel	373;
+	featureAngle	20.0;
+}
+exchanger_hot_out
+{
+	nFacesInCoarsestLevel	372;
+	featureAngle	20.0;
+}
+pipes
+{
+	nFacesInCoarsestLevel	11831;
+	featureAngle	20.0;
+}
+pipes_baffle_in
+{
+	nFacesInCoarsestLevel	2380;
+	featureAngle	20.0;
+}
+pipes_baffle_out
+{
+	nFacesInCoarsestLevel	2408;
+	featureAngle	20.0;
+}
