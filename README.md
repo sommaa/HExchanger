@@ -1,9 +1,20 @@
 # HExchanger
-simulation of a labscale shell and tube heat exchanger water/water
+simulation of a labscale shell and tube heat exchanger water/water.
 
-Results:
-![geom](https://user-images.githubusercontent.com/120776791/211874000-a31d6f22-2b93-4a04-a8a4-57c150370c2b.png)
+- $U_{inlet shell}$ = 0.2 m/s;
+- $U_{inlet tubes}$ = 0.02 m/s;
+- $T_{inlet shell cold}$ = 283K;
+- $T_{inlet tubes hot}$ = 383K;
+- $configuration = counter current$
 
-![p](https://user-images.githubusercontent.com/120776791/211874017-9ececabb-8efb-4e18-95ca-0a9b386c7bc9.png)
+## Results:
+- $U_{outlet shell}$ = 0.2 m/s;
+- $U_{outlet tubes}$ = 0.02 m/s;
+- $T_{outlet shell cold}$ = 286K;
+- $T_{outlet tubes hot}$ = 360K;
 
-![T](https://user-images.githubusercontent.com/120776791/211874023-bd706078-b57d-4d23-8ddf-30eae6a30308.png)
+## images
+![geom](https://user-images.githubusercontent.com/120776791/211913386-081f864b-32ca-463d-9b7e-bad4296ad92c.png)
+![p](https://user-images.githubusercontent.com/120776791/211913395-5ec01c06-0e67-469f-aa30-fb3d305c7b63.png)
+![T](https://user-images.githubusercontent.com/120776791/211913405-9d39e3f3-0dce-46ad-9e98-464e637916a0.png)
+![U](https://user-images.githubusercontent.com/120776791/211913412-cf6e524f-ccb1-4bad-a6c6-cf595b711c88.png)
