@@ -6,8 +6,8 @@ simulation of a labscale 1-1 shell and tube heat exchanger water/water.
 - $T_{inlet shell cold}$ = 283K;
 - $T_{inlet tubes hot}$ = 383K;
 - $configuration = co-current$
-- baffle pitch = shell diameter;
-- baffle cut = 25%;
+- $baffle pitch = shell diameter$;
+- $baffle cut = 25%$;
 
 ## Results:
 - $U_{outlet shell}$ = 0.2 m/s;
