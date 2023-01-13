@@ -5,8 +5,8 @@ cd ${0%/*} || exit 1    # Run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-#runApplication -s cold    decomposePar -region cold
-#runApplication -s hot decomposePar -region hot
+runApplication -s cold    decomposePar -region cold
+runApplication -s hot decomposePar -region hot
 
 foamJob -parallel -screen chtMultiRegionFoam
 
